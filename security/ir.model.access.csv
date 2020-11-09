@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+croixrouge_etat_vetement,croixrouge.etat_vetement,model_croixrouge_etat_vetement,,1,1,1,1
+croixrouge_type_vetement,croixrouge.type_vetement,model_croixrouge_type_vetement,,1,1,1,1
+croixrouge_unite_locale,croixrouge.unite_locale,model_croixrouge_unite_locale,,1,1,1,1
+croixrouge_vetement,croixrouge.vetement,model_croixrouge_vetement,,1,1,1,1
+croixrouge_benevole,croixrouge.benevole,model_croixrouge_benevole,,1,1,1,1
+croixrouge_responsable,croixrouge.responsable,model_croixrouge_responsable,,1,1,1,1
+croixrouge_type_tenue,croixrouge.type_tenue,model_croixrouge_type_tenue,,1,1,1,1
+croixrouge_affectation_tenue,croixrouge.affectation_tenue,model_croixrouge_affectation_tenue,,1,1,1,1
+croixrouge_mission,croixrouge.mission,model_croixrouge_mission,,1,1,1,1

@@ -1,0 +1,44 @@
+<odoo>
+	<data>
+		<!-- Mission - Form -->
+		<record model="ir.ui.view" id="mission_form_view">
+			<field name="name">mission.form</field>
+			<field name="model">croixrouge.mission</field>
+			<field name="arch" type="xml">
+				<form string="Mission">
+					<sheet>
+						<group>
+							<field name="nom"/>
+							<field name="date"/>
+							<field name="unite_locale_id"/>
+							<field name="responsable_id"/>
+							<field name="affectation_tenue_ids"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Mission - Tree -->
+		<record model="ir.ui.view" id="mission_tree_view">
+			<field name="name">mission.tree</field>
+			<field name="model">croixrouge.mission</field>
+			<field name="arch" type="xml">
+				<tree string="Missions">
+					<field name="nom"/>
+					<field name="date"/>
+					<field name="unite_locale_id"/>
+					<field name="responsable_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Mission - Action -->
+		<record model="ir.actions.act_window" id="mission_action">
+			<field name="name">Missions</field>
+			<field name="res_model">croixrouge.mission</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>

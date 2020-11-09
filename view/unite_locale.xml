@@ -1,0 +1,37 @@
+<odoo>
+	<data>
+		<!-- Unite Locale - Form -->
+		<record model="ir.ui.view" id="unite_locale_form_view">
+			<field name="name">unite_locale.form</field>
+			<field name="model">croixrouge.unite_locale</field>
+			<field name="arch" type="xml">
+				<form string="Etat">
+					<sheet>
+						<group>
+							<field name="name"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Unite Locale - Tree -->
+		<record model="ir.ui.view" id="unite_locale_tree_view">
+			<field name="name">unite_locale.tree</field>
+			<field name="model">croixrouge.unite_locale</field>
+			<field name="arch" type="xml">
+				<tree string="Etat">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Unite Locale - Action -->
+		<record model="ir.actions.act_window" id="unite_locale_action">
+			<field name="name">Etat du vêtement</field>
+			<field name="res_model">croixrouge.unite_locale</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,131 @@
+<odoo>
+	<data>
+		<!-- ########## Type Vetement ########## -->
+	
+		<!-- Type Vetement - Form -->
+		<record model="ir.ui.view" id="type_vetement_tree_view">
+			<field name="name">type_vetement.form</field>
+			<field name="model">croixrouge.type_vetement</field>
+			<field name="arch" type="xml">
+				<tree string="Type">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Type Vetement - Tree -->
+		<record model="ir.ui.view" id="type_vetement_tree_view">
+			<field name="name">type_vetement.tree</field>
+			<field name="model">croixrouge.type_vetement</field>
+			<field name="arch" type="xml">
+				<tree string="Type">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Type Vetement - Action -->
+		<record model="ir.actions.act_window" id="type_vetement_action">
+			<field name="name">Type de vêtement</field>
+			<field name="res_model">croixrouge.type_vetement</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<!-- ########## Etat Vetement ########## -->
+
+		<!-- Etat Vetement - Form -->
+		<record model="ir.ui.view" id="etat_vetement_form_view">
+			<field name="name">etat_vetement.form</field>
+			<field name="model">croixrouge.etat_vetement</field>
+			<field name="arch" type="xml">
+				<form string="Etat">
+					<sheet>
+						<group>
+							<field name="name"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Etat Vetement - Tree -->
+		<record model="ir.ui.view" id="etat_vetement_tree_view">
+			<field name="name">etat_vetement.tree</field>
+			<field name="model">croixrouge.etat_vetement</field>
+			<field name="arch" type="xml">
+				<tree string="Etat">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Etat Vetement - Action -->
+		<record model="ir.actions.act_window" id="etat_vetement_action">
+			<field name="name">Etat du vêtement</field>
+			<field name="res_model">croixrouge.etat_vetement</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<!-- ########## Vetement ########## -->
+
+		<!-- Vetement - Form -->
+		<record model="ir.ui.view" id="vetement_form_view">
+			<field name="name">vetement.form</field>
+			<field name="model">croixrouge.vetement</field>
+			<field name="arch" type="xml">
+				<form string="Vetement">
+					<sheet>
+						<group>
+							<field name="type_id"/>
+							<field name="state_id"/>
+							<field name="unite_locale_id"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Vetement - Tree -->
+		<record model="ir.ui.view" id="vetement_tree_view">
+			<field name="name">vetement.tree</field>
+			<field name="model">croixrouge.vetement</field>
+			<field name="arch" type="xml">
+				<tree string="Vetement" decoration-success="code_couleur==0" decoration-warning="code_couleur==1" decoration-primary="code_couleur==2">
+					<field name="type_id"/>
+					<field name="state_id"/>
+					<field name="unite_locale_id"/>
+					<field name="code_couleur" invisible="True"/>
+				</tree>
+			</field>
+		</record>
+		
+		<!-- Vetement - Search -->
+		<record model="ir.ui.view" id="vetement_search_view">
+			<field name="name">vetement.search</field>
+			<field name="model">croixrouge.vetement</field>
+			<field name="arch" type="xml">
+				<search string="Group by type">
+					<field name="type_id"/>
+					<field name="state_id"/>
+					<field name="unite_locale_id"/>
+					
+					<filter name="group_by_type_filter" string="Type" context="{'group_by':'type_id'}"/>
+				</search>
+			</field>
+		</record>
+
+		<!-- Vetement - Action -->
+		<record model="ir.actions.act_window" id="vetement_action">
+			<field name="name">Vêtements</field>
+			<field name="res_model">croixrouge.vetement</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="vetement_search_view"/>
+			<field name="context">{'search_default_group_by_type_filter': 1}</field>
+		</record>
+	</data>
+</odoo>

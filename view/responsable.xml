@@ -1,0 +1,39 @@
+<odoo>
+	<data>
+		<!-- Responsable - Form -->
+		<record model="ir.ui.view" id="responsable_form_view">
+			<field name="name">responsable.form</field>
+			<field name="model">croixrouge.responsable</field>
+			<field name="arch" type="xml">
+				<form string="Responsable">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="unite_locale_id"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Responsable - Tree -->
+		<record model="ir.ui.view" id="responsable_tree_view">
+			<field name="name">responsable.tree</field>
+			<field name="model">croixrouge.responsable</field>
+			<field name="arch" type="xml">
+				<tree string="Responsable">
+					<field name="name"/>
+					<field name="unite_locale_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Responsable - Action -->
+		<record model="ir.actions.act_window" id="responsable_action">
+			<field name="name">Responsables</field>
+			<field name="res_model">croixrouge.responsable</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>

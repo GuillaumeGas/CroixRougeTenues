@@ -1,0 +1,38 @@
+<odoo>
+	<data>
+		<!-- Type Tenue - Form -->
+		<record model="ir.ui.view" id="type_tenue_form_view">
+			<field name="name">type_tenue.form</field>
+			<field name="model">croixrouge.type_tenue</field>
+			<field name="arch" type="xml">
+				<form string="Type de tenue">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="type_vetement_ids"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Type Tenue - Tree -->
+		<record model="ir.ui.view" id="type_tenue_tree_view">
+			<field name="name">type_tenue.tree</field>
+			<field name="model">croixrouge.type_tenue</field>
+			<field name="arch" type="xml">
+				<tree string="Type de tenue">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Type Tenue - Action -->
+		<record model="ir.actions.act_window" id="type_tenue_action">
+			<field name="name">Types de tenue</field>
+			<field name="res_model">croixrouge.type_tenue</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>

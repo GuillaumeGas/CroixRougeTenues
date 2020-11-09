@@ -1,0 +1,37 @@
+<odoo>
+	<data>
+		<!-- Benevole - Form -->
+		<record model="ir.ui.view" id="benevole_form_view">
+			<field name="name">benevole.form</field>
+			<field name="model">croixrouge.benevole</field>
+			<field name="arch" type="xml">
+				<form string="Bénévole">
+					<sheet>
+						<group>
+							<field name="name"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Benevole - Tree -->
+		<record model="ir.ui.view" id="benevole_tree_view">
+			<field name="name">benevole.tree</field>
+			<field name="model">croixrouge.benevole</field>
+			<field name="arch" type="xml">
+				<tree string="Bénévole">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Benevole - Action -->
+		<record model="ir.actions.act_window" id="benevole_action">
+			<field name="name">Bénévoles</field>
+			<field name="res_model">croixrouge.benevole</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>
