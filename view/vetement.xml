@@ -81,7 +81,8 @@
 					<sheet>
 						<group>
 							<field name="type_id"/>
-							<field name="state_id"/>
+							<field name="etat_id"/>
+							<field name="taille"/>
 							<field name="unite_locale_id"/>
 						</group>
 					</sheet>
@@ -96,7 +97,8 @@
 			<field name="arch" type="xml">
 				<tree string="Vetement" decoration-success="code_couleur==0" decoration-warning="code_couleur==1" decoration-primary="code_couleur==2">
 					<field name="type_id"/>
-					<field name="state_id"/>
+					<field name="taille"/>
+					<field name="etat_id"/>
 					<field name="unite_locale_id"/>
 					<field name="code_couleur" invisible="True"/>
 				</tree>
@@ -110,7 +112,8 @@
 			<field name="arch" type="xml">
 				<search string="Group by type">
 					<field name="type_id"/>
-					<field name="state_id"/>
+					<field name="taille"/>
+					<field name="etat_id"/>
 					<field name="unite_locale_id"/>
 					
 					<filter name="group_by_type_filter" string="Type" context="{'group_by':'type_id'}"/>
@@ -118,6 +121,17 @@
 			</field>
 		</record>
 
+		<!-- Transaction - Graph -->
+<!--		<record model="ir.ui.view" id="vetement_tree_view">
+			<field name="name">vetement.graph</field>
+			<field name="model">croixrouge.vetement</field>
+			<field name="arch" type="xml">
+				<graph string="Vetements" type="pie">
+					<field name="etat_id"/>
+				</graph>
+			</field>
+		</record>
+-->
 		<!-- Vetement - Action -->
 		<record model="ir.actions.act_window" id="vetement_action">
 			<field name="name">Vêtements</field>

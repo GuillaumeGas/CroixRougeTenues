@@ -8,7 +8,9 @@
 				<form string="Bénévole">
 					<sheet>
 						<group>
-							<field name="name"/>
+							<field name="nom"/>
+							<field name="prenom"/>
+							<field name="nivol"/>
 						</group>
 					</sheet>
 				</form>
@@ -21,7 +23,9 @@
 			<field name="model">croixrouge.benevole</field>
 			<field name="arch" type="xml">
 				<tree string="Bénévole">
-					<field name="name"/>
+					<field name="nom"/>
+					<field name="prenom"/>
+					<field name="nivol"/>
 				</tree>
 			</field>
 		</record>
