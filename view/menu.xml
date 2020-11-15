@@ -3,14 +3,19 @@
 		<menuitem id="main_croix_rouge_menu" name="Croix-Rouge Tenues" sequence="0"/>
 
 		<menuitem id="croix_rouge_menu_main" name="Menu" parent="main_croix_rouge_menu"/>
-		<menuitem id="vetement_menu" name="Vetements" parent="croix_rouge_menu_main" action="vetement_action"/>
-		<menuitem id="type_menu" name="Type" parent="croix_rouge_menu_main" action="type_vetement_action"/>
-		<menuitem id="etat_menu" name="Etat" parent="croix_rouge_menu_main" action="etat_vetement_action"/>
-		<menuitem id="unite_locale_menu" name="Unit locale" parent="croix_rouge_menu_main" action="unite_locale_action"/>
-		<menuitem id="benevole_menu" name="Bénévoles" parent="croix_rouge_menu_main" action="benevole_action"/>
-		<menuitem id="responsable_menu" name="Responsables" parent="croix_rouge_menu_main" action="responsable_action"/>
-		<menuitem id="type_tenue_menu" name="Types de tenue" parent="croix_rouge_menu_main" action="type_tenue_action"/>
-		<menuitem id="affectation_tenue_menu" name="Affectations de tenues" parent="croix_rouge_menu_main" action="affectation_tenue_action"/>
-		<menuitem id="mission_menu" name="Missions" parent="croix_rouge_menu_main" action="mission_action"/>
+		
+		<menuitem id="croix_rouge_menu_gestion" name="Gestion" parent="croix_rouge_menu_main" sequence="0"/>
+		<menuitem id="vetement_menu" name="Vetements" parent="croix_rouge_menu_gestion" action="vetement_action"/>
+		<menuitem id="affectation_tenue_menu" name="Affectations de tenues" parent="croix_rouge_menu_gestion" action="affectation_tenue_action"/>
+		<menuitem id="mission_menu" name="Missions" parent="croix_rouge_menu_gestion" action="mission_action"/>
+		
+		<menuitem id="croix_rouge_menu_conf" name="Configuration" parent="croix_rouge_menu_main" sequence="1"/>
+		<menuitem id="type_tenue_menu" name="Types de tenue" parent="croix_rouge_menu_conf" action="type_tenue_action" sequence="0"/>
+		<menuitem id="type_menu" name="Types de vêtement" parent="croix_rouge_menu_conf" action="type_vetement_action" sequence="1"/>
+		<menuitem id="benevole_menu" name="Bénévoles" parent="croix_rouge_menu_conf" action="benevole_action" sequence="2"/>
+		<menuitem id="responsable_menu" name="Responsables" parent="croix_rouge_menu_conf" action="responsable_action" sequence="3"/>
+		<menuitem id="unite_locale_menu" name="Unités locales" parent="croix_rouge_menu_conf" action="unite_locale_action" sequence="4"/>
+
+		
 	</data>
 </odoo>

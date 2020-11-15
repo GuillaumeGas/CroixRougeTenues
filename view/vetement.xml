@@ -32,44 +32,6 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-
-		<!-- ########## Etat Vetement ########## -->
-
-		<!-- Etat Vetement - Form -->
-		<record model="ir.ui.view" id="etat_vetement_form_view">
-			<field name="name">etat_vetement.form</field>
-			<field name="model">croixrouge.etat_vetement</field>
-			<field name="arch" type="xml">
-				<form string="Etat">
-					<sheet>
-						<group>
-							<field name="name"/>
-						</group>
-					</sheet>
-				</form>
-			</field>
-		</record>
-
-		<!-- Etat Vetement - Tree -->
-		<record model="ir.ui.view" id="etat_vetement_tree_view">
-			<field name="name">etat_vetement.tree</field>
-			<field name="model">croixrouge.etat_vetement</field>
-			<field name="arch" type="xml">
-				<tree string="Etat">
-					<field name="name"/>
-				</tree>
-			</field>
-		</record>
-
-		<!-- Etat Vetement - Action -->
-		<record model="ir.actions.act_window" id="etat_vetement_action">
-			<field name="name">Etat du vêtement</field>
-			<field name="res_model">croixrouge.etat_vetement</field>
-			<field name="view_type">form</field>
-			<field name="view_mode">tree,form</field>
-		</record>
-
-
 		<!-- ########## Vetement ########## -->
 
 		<!-- Vetement - Form -->
@@ -81,7 +43,7 @@
 					<sheet>
 						<group>
 							<field name="type_id"/>
-							<field name="etat_id"/>
+							<field name="etat"/>
 							<field name="taille"/>
 							<field name="unite_locale_id"/>
 						</group>
@@ -95,12 +57,11 @@
 			<field name="name">vetement.tree</field>
 			<field name="model">croixrouge.vetement</field>
 			<field name="arch" type="xml">
-				<tree string="Vetement" decoration-success="code_couleur==0" decoration-warning="code_couleur==1" decoration-primary="code_couleur==2">
+				<tree string="Vetement" decoration-success="etat==0" decoration-warning="etat==1" decoration-primary="etat==2">
 					<field name="type_id"/>
 					<field name="taille"/>
-					<field name="etat_id"/>
+					<field name="etat"/>
 					<field name="unite_locale_id"/>
-					<field name="code_couleur" invisible="True"/>
 				</tree>
 			</field>
 		</record>
@@ -113,7 +74,7 @@
 				<search string="Group by type">
 					<field name="type_id"/>
 					<field name="taille"/>
-					<field name="etat_id"/>
+					<field name="etat"/>
 					<field name="unite_locale_id"/>
 					
 					<filter name="group_by_type_filter" string="Type" context="{'group_by':'type_id'}"/>

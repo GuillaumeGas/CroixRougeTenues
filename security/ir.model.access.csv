@@ -1,5 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-croixrouge_etat_vetement,croixrouge.etat_vetement,model_croixrouge_etat_vetement,,1,1,1,1
 croixrouge_type_vetement,croixrouge.type_vetement,model_croixrouge_type_vetement,,1,1,1,1
 croixrouge_unite_locale,croixrouge.unite_locale,model_croixrouge_unite_locale,,1,1,1,1
 croixrouge_vetement,croixrouge.vetement,model_croixrouge_vetement,,1,1,1,1

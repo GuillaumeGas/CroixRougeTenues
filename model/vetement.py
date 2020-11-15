@@ -5,7 +5,11 @@ class Vetement(models.Model):
 	_name = 'croixrouge.vetement'
 	
 	type_id = fields.Many2one('croixrouge.type_vetement', string="Type", required=True, ondelete='set null')
-	etat_id = fields.Many2one('croixrouge.etat_vetement', string="State", required=True, ondelete='set null')
+	etat = fields.Selection([
+		(0, 'Disponible'),
+		(1, 'Affecté'),
+		(2, 'Lavage'),
+		], string="Etat", default=0)
 	taille = fields.Selection([
 		('XS', 'XS (36)'),
 		('S', 'S (38)'),
@@ -16,15 +20,3 @@ class Vetement(models.Model):
 		('XXXL', 'XXXL (48)'),
 		], string="Taille", default='M')
 	unite_locale_id = fields.Many2one('croixrouge.unite_locale', string="UL", required=True, ondelete='set null')
-	
-	code_couleur = fields.Integer(compute='_get_code_couleur')
-	
-	@api.multi
-	def _get_code_couleur(self):
-		for vet in self:
-			if vet.etat_id.name == "Disponible":
-				vet.code_couleur = 0
-			elif vet.etat_id.name == "Affecté":
-				vet.code_couleur = 1
-			else:
-				vet.code_couleur = 2
