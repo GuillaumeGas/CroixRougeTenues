@@ -9,8 +9,8 @@
 					<sheet>
 						<group>
 							<field name="benevole_id"/>
-							<field name="type_tenue_id"/>
 							<field name="date_retour"/>
+							<field name="vetement_ids" domain="[('etat', '=', 0)]"/>
 						</group>
 					</sheet>
 				</form>
@@ -24,7 +24,6 @@
 			<field name="arch" type="xml">
 				<tree string="Affectation tenue" decoration-danger="est_en_retard==True">
 					<field name="benevole_id"/>
-					<field name="type_tenue_id"/>
 					<field name="date_retour"/>
 					<field name="est_en_retard" invisible="True"/>
 				</tree>
