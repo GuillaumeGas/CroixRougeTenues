@@ -8,7 +8,7 @@
 				<form string="Mission">
 					<sheet>
 						<group>
-							<field name="nom"/>
+							<field name="name"/>
 							<field name="date"/>
 							<field name="unite_locale_id"/>
 							<field name="responsable_id"/>
@@ -25,7 +25,7 @@
 			<field name="model">croixrouge.mission</field>
 			<field name="arch" type="xml">
 				<tree string="Missions">
-					<field name="nom"/>
+					<field name="name"/>
 					<field name="date"/>
 					<field name="unite_locale_id"/>
 					<field name="responsable_id"/>

@@ -4,7 +4,7 @@ from openerp import api, models, fields
 class Mission(models.Model):
 	_name = 'croixrouge.mission'
 	
-	nom = fields.Char(string="Nom", required=True)
+	name = fields.Char(string="Nom", required=True)
 	date = fields.Date(string="Date", required=True, default=fields.Date.today())
 	
 	unite_locale_id = fields.Many2one('croixrouge.unite_locale', string="Unité locale", required=True, ondelete='set null')

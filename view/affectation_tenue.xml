@@ -11,6 +11,7 @@
 							<field name="benevole_id"/>
 							<field name="date_retour"/>
 							<field name="vetement_ids" domain="[('etat', '=', 0)]"/>
+							<field name="rendue"/>
 						</group>
 					</sheet>
 				</form>
@@ -23,10 +24,26 @@
 			<field name="model">croixrouge.affectation_tenue</field>
 			<field name="arch" type="xml">
 				<tree string="Affectation tenue" decoration-danger="est_en_retard==True">
-					<field name="benevole_id"/>
-					<field name="date_retour"/>
+					<field name="benevole_id" readonly="1"/>
+					<field name="date_retour" readonly="1"/>
+					<field name="rendue"/>
 					<field name="est_en_retard" invisible="True"/>
 				</tree>
+			</field>
+		</record>
+
+		<!-- Affectation Tenue - Search -->
+		<record model="ir.ui.view" id="affectation_tenue_search_view">
+			<field name="name">affectation_tenue.search</field>
+			<field name="model">croixrouge.affectation_tenue</field>
+			<field name="arch" type="xml">
+				<search string="Group by type">
+					<field name="benevole_id"/>
+					<field name="date_retour"/>
+					<field name="rendue"/>
+					
+					<filter name="filter_rendue" string="Tenues non rendues" domain="[('rendue', '=', False)]"/>
+				</search>
 			</field>
 		</record>
 
@@ -36,6 +53,8 @@
 			<field name="res_model">croixrouge.affectation_tenue</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="affectation_tenue_search_view"/>
+			<field name="context">{'search_default_filter_rendue': 1}</field>
 		</record>
 	</data>
 </odoo>
