@@ -77,28 +77,29 @@
 					<field name="etat"/>
 					<field name="unite_locale_id"/>
 					
-					<filter name="group_by_type_filter" string="Type" context="{'group_by':'type_id'}"/>
+					<filter name="group_by_type_filter" string="Grouper par type" context="{'group_by':'type_id'}"/>
 				</search>
 			</field>
 		</record>
 
 		<!-- Transaction - Graph -->
-<!--		<record model="ir.ui.view" id="vetement_tree_view">
+		<record model="ir.ui.view" id="vetement_tree_view">
 			<field name="name">vetement.graph</field>
 			<field name="model">croixrouge.vetement</field>
 			<field name="arch" type="xml">
 				<graph string="Vetements" type="pie">
-					<field name="etat_id"/>
+					<field name="type_id"/>
+					<field name="etat" type="measure"/>
 				</graph>
 			</field>
 		</record>
--->
+
 		<!-- Vetement - Action -->
 		<record model="ir.actions.act_window" id="vetement_action">
 			<field name="name">Vêtements</field>
 			<field name="res_model">croixrouge.vetement</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form</field>
+			<field name="view_mode">tree,form,graph</field>
 			<field name="search_view_id" ref="vetement_search_view"/>
 			<field name="context">{'search_default_group_by_type_filter': 1}</field>
 		</record>

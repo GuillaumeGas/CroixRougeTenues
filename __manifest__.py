@@ -8,6 +8,7 @@
     'website': 'http://croix-rouge.fr',
     'depends': [
         'base',
+		'web',
     ],
     'data': [
         'view/vetement.xml',
@@ -18,6 +19,7 @@
 		'view/affectation_tenue.xml',
 		'view/mission.xml',
 		'view/menu.xml',
+		'view/theme.xml',
 		'security/ir.model.access.csv',
     ],
     'test': [
