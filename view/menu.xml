@@ -10,7 +10,6 @@
 		<menuitem id="mission_menu" name="Missions" parent="croix_rouge_menu_gestion" action="mission_action"/>
 		
 		<menuitem id="croix_rouge_menu_conf" name="Configuration" parent="croix_rouge_menu_main" sequence="1"/>
-		<menuitem id="type_tenue_menu" name="Types de tenue" parent="croix_rouge_menu_conf" action="type_tenue_action" sequence="0"/>
 		<menuitem id="type_menu" name="Types de vêtement" parent="croix_rouge_menu_conf" action="type_vetement_action" sequence="1"/>
 		<menuitem id="benevole_menu" name="Bénévoles" parent="croix_rouge_menu_conf" action="benevole_action" sequence="2"/>
 		<menuitem id="responsable_menu" name="Responsables" parent="croix_rouge_menu_conf" action="responsable_action" sequence="3"/>

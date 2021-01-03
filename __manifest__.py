@@ -15,7 +15,6 @@
 		'view/unite_locale.xml',
 		'view/benevole.xml',
 		'view/responsable.xml',
-		'view/type_tenue.xml',
 		'view/affectation_tenue.xml',
 		'view/mission.xml',
 		'view/menu.xml',
@@ -33,7 +32,7 @@
     'css': [
     ],
     'installable': True,
-    'application': False,
+    'application': True,
     'auto_install': False,
     'license': 'AGPL-3',
 }

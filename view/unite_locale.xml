@@ -28,7 +28,7 @@
 
 		<!-- Unite Locale - Action -->
 		<record model="ir.actions.act_window" id="unite_locale_action">
-			<field name="name">Etat du vêtement</field>
+			<field name="name">Unité locale</field>
 			<field name="res_model">croixrouge.unite_locale</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
